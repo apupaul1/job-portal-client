@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../../context/AuthContext";
 
 const Navbar = () => {
-  const { user } = use(AuthContext);
+  const { user, logoutUser } = use(AuthContext);
   const navLinks = (
     <>
       <NavLink>Home</NavLink>
@@ -11,6 +11,16 @@ const Navbar = () => {
       <NavLink>My Application</NavLink>
     </>
   );
+
+
+  const handleLogout = () => {
+    logoutUser().then(()=>{
+      alert("Sign out");
+    })
+    .catch((error)=>{
+      console.log(error);
+    })
+  }
 
   return (
     <div>
@@ -25,14 +35,14 @@ const Navbar = () => {
           <div className="hidden lg:flex gap-4">
             {user ? (
               <>
-                <Link className="btn">Logout</Link>
+                <Link onClick={()=>logoutUser()} className="btn">Logout</Link>
               </>
             ) : (
               <>
                 <Link to={"/auth/register"} className="btn">
                   Register
                 </Link>
-                <Link className="btn">Login</Link>
+                <Link to={'/auth/login'} className="btn">Login</Link>
               </>
             )}
           </div>

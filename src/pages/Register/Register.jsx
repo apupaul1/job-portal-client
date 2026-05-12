@@ -1,9 +1,10 @@
 import React, { use } from "react";
-import { Link, Navigate } from "react-router";
+import { Link, Navigate, useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
 
 const Register = () => {
   const { createUser } = use(AuthContext);
+  const navigate = useNavigate();
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -23,7 +24,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result);
-        <Navigate to={'/'} ></Navigate>
+        navigate('/')
       })
       .catch((error) => {
         console.log(error);
@@ -83,7 +84,7 @@ const Register = () => {
           <button className="btn btn-neutral mt-4">Register</button>
 
           <span className="text-center text-[14px] mt-3">
-            Already Have an account?<Link>Login</Link>
+            Already Have an account?<Link to={'/auth/login'}>Login</Link>
           </span>
         </form>
       </div>
