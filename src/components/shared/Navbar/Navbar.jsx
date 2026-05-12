@@ -6,7 +6,7 @@ const Navbar = () => {
   const { user, logoutUser } = use(AuthContext);
   const navLinks = (
     <>
-      <NavLink>Home</NavLink>
+      <NavLink to={'/'}>Home</NavLink>
       <NavLink>All Jobs</NavLink>
       <NavLink>My Application</NavLink>
     </>

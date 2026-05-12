@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import { Link, Navigate, useNavigate } from "react-router";
 import { AuthContext } from "../../context/AuthContext";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Register = () => {
   const { createUser } = use(AuthContext);
@@ -45,6 +46,8 @@ const Register = () => {
             Access to all features. No credit card required.
           </p>
         </div>
+
+        <SocialLogin></SocialLogin>
 
         <form
           onSubmit={handleRegister}

@@ -9,24 +9,25 @@ import banner6 from "../../assets/Banner-6.jpg";
 
 const Banner = () => {
   return (
-    <div className="w-10/12 mx-auto my-8 flex justify-between items-center min-h-100">
-      <div className="pl-20">
+    <div className="lg:w-9/12 mx-auto text-center lg:text-left my-8 flex flex-col-reverse lg:flex-row justify-between items-center lg:min-h-110">
+
+      <div className="lg:pl-20">
         <div>
           <h1 className="text-5xl font-bold">
             Find Jobs, <br /> Hire Creatives
           </h1>
-          <p className="w-2/3 my-4">
+          <p className="w-2/3 mx-auto lg:mx-0 my-4">
             Each month, more than 3 million job seekers turn to website in their
             search for work, making over 140,000 applications every single day
           </p>
-          <div className="my-6 flex gap-8">
+          <div className="my-6 flex gap-8 justify-center lg:justify-normal">
             <button className="btn">Get Started</button>
             <button className="btn">Learn More</button>
           </div>
         </div>
         <div>
           <h1>Trusted By</h1>
-          <div className="flex gap-8 text-2xl text-primary font-bold">
+          <div className="flex gap-8 justify-center lg:justify-normal text-2xl text-primary font-bold">
             <span className="italic">Microsoft</span>
             <span>Sony</span>
             <span className="italic">Acer</span>
@@ -41,9 +42,9 @@ const Banner = () => {
             y: [50, 100, 50],
           }}
           transition={{ repeat: Infinity, duration: 10 }}
-          className="avatar right-30"
+          className="avatar lg:right-30"
         >
-          <div className="w-80 rounded-full">
+          <div className="lg:w-80 w-60 rounded-full">
             <img src={banner1} alt="" />
           </div>
         </motion.div>

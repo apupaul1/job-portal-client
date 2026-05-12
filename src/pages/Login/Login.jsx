@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router";
 import useAuth from "../../hooks/useAuth/useAuth";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
 const Login = () => {
   const {signInUser} = useAuth()
@@ -33,6 +34,8 @@ const Login = () => {
             Access to all features. No credit card required.
           </p>
         </div>
+
+        <SocialLogin></SocialLogin>
 
         <form
           onSubmit={handleLogin}
