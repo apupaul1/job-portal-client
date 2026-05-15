@@ -9,8 +9,7 @@ import banner6 from "../../assets/Banner-6.jpg";
 
 const Banner = () => {
   return (
-    <div className="lg:w-9/12 mx-auto text-center lg:text-left my-8 flex flex-col-reverse lg:flex-row justify-between items-center lg:min-h-110">
-
+    <div className="lg:w-9/12 mx-auto text-center lg:text-left flex flex-col-reverse lg:flex-row justify-between items-center lg:min-h-100">
       <div className="lg:pl-20">
         <div>
           <h1 className="text-5xl font-bold">
@@ -92,17 +91,18 @@ const Banner = () => {
           transition={{ repeat: Infinity, duration: 10 }}
           className="avatar"
         >
-          <div className="w-30 rounded-full absolute top-55 right-40">
+          <div className="w-30 rounded-full absolute top-50 right-30">
             <img src={banner5} alt="" />
           </div>
         </motion.div>
 
-        <motion.div 
-                  animate={{
+        <motion.div
+          animate={{
             x: [10, 50, 10],
           }}
           transition={{ repeat: Infinity, duration: 8 }}
-        className="avatar">
+          className="avatar"
+        >
           <div className="w-30 rounded-full absolute top-15 right-10">
             <img src={banner6} alt="" />
           </div>
